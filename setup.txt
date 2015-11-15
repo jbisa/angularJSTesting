@@ -1,0 +1,52 @@
+1. Install node.js --> https://nodejs.org/en/download/
+  a. node -v (should be higher than v0.10.32)
+
+2. Node comes with NPM (Node Package Manager) already installed, make sure it's up to date
+  a. npm -v (should be higher than 2.1.8)
+  b. If you don't have npm installed for some reason run: sudo npm install npm -g
+
+3. Initialize Node in your project directory
+  a. npm init
+
+4. Install AngularJS
+  a. npm install angular —-save
+
+5. Install Karma and plugins
+  a. npm install karma --save-dev
+  b. npm install karma-jasmine karma-chrome-launcher --save-dev
+
+6. Install Karma command line interface so you can run Karma by simply typing 'karma <command>'
+  a. sudo npm install -g karma-cli
+
+7. Install Jasmine
+  a. npm install karma-jasmine jasmine-core --save-dev
+
+8. Install ngMock which lets you inject and mock angular services to help test your app
+  a. npm install angular-mocks --save-dev
+
+9. Install PhantomJS
+  a. npm install phantomjs
+
+10. Install PhantomJS browser launcher on which karma will run your tests
+  a. npm install karma-phantomjs-launcher --save-dev
+
+11. Init Karma
+  a. karma init (then choose the options below)
+	i. Jasmine
+	ii. no
+	iii. PhantomJS
+	iv. app/*.js
+	v. tests/*.js
+	vi. (enter)
+	vii. (enter)
+	viii. yes
+
+12. Add locations of AngularJS and ngMock into the files array of karma.conf.js file
+  a. ’node_modules/angular/angular.js’,
+  b. ‘node_modules/angular-mocks/angular-mocks.js’
+
+13. Create a directory called ‘app’, this is where your app’s js code will live
+
+14. Create a directory called ‘tests’, this is where all of your js tests will live
+
+15. When you’re ready to test, simply run ‘karma start’ from your project’s root directory
